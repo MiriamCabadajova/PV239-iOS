@@ -1,4 +1,4 @@
-# PV239-iOS-repo
+# PV239 iOS
 Repository for assignments in course PV239 with focus on iOS mobile application development.
 
 ## First Assignment

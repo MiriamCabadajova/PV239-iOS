@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05l-q4-Jks">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Useful View Controller-->
+        <scene sceneID="u3g-DJ-mGg">
+            <objects>
+                <viewController id="05l-q4-Jks" customClass="UsefulViewController" customModule="MyUsefulApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPH-EY-rsl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="9Ng-xA-eCw">
+                                <rect key="frame" x="82" y="311" width="250" height="274.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="81m-ys-bL0">
+                                        <rect key="frame" x="83" y="0.0" width="84.5" height="169.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daq-BM-Ip8">
+                                                <rect key="frame" x="11.5" y="0.0" width="61" height="119.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clicks" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS8-iZ-jPQ">
+                                                <rect key="frame" x="0.0" y="127.5" width="84.5" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGl-2B-crr">
+                                        <rect key="frame" x="0.0" y="209.5" width="250" height="65"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Edo-uH-TAN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <state key="normal" title="Click me!">
+                                            <color key="titleColor" name="customOrange"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonClickHandler:" destination="05l-q4-Jks" eventType="touchUpInside" id="VRP-RM-y9D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal" spacing="60"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Ng-xA-eCw" firstAttribute="centerX" secondItem="dPH-EY-rsl" secondAttribute="centerX" id="Kil-lH-8cN"/>
+                            <constraint firstItem="9Ng-xA-eCw" firstAttribute="centerY" secondItem="dPH-EY-rsl" secondAttribute="centerY" id="Ku4-3c-NC7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TdB-Eb-J2P"/>
+                    </view>
+                    <connections>
+                        <outlet property="clickMeButton" destination="OGl-2B-crr" id="d07-oR-IYC"/>
+                        <outlet property="clickTextLabel" destination="pS8-iZ-jPQ" id="0RJ-Lf-COz"/>
+                        <outlet property="numberLabel" destination="daq-BM-Ip8" id="9s4-Ks-I3F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMD-Vw-fct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.20000000000000001" green="0.24705882352941178" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customOrange">
+            <color red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

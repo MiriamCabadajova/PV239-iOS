@@ -6,4 +6,14 @@
 //  Copyright © 2020 FI MU. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class PopupViewController: UIViewController {
+    
+    @IBAction func closePopup(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

@@ -64,7 +64,7 @@
                                     <constraint firstItem="BGy-WG-VUy" firstAttribute="top" secondItem="G08-cz-W92" secondAttribute="top" constant="200" id="4yJ-Do-OlC">
                                         <variation key="heightClass=compact-widthClass=regular" constant="50"/>
                                     </constraint>
-                                    <constraint firstItem="BGy-WG-VUy" firstAttribute="bottom" secondItem="G08-cz-W92" secondAttribute="bottom" constant="408" id="FSo-au-sVF">
+                                    <constraint firstItem="BGy-WG-VUy" firstAttribute="bottom" secondItem="G08-cz-W92" secondAttribute="bottom" constant="50" id="FSo-au-sVF">
                                         <variation key="heightClass=compact-widthClass=regular" constant="50"/>
                                     </constraint>
                                     <constraint firstItem="BGy-WG-VUy" firstAttribute="leading" secondItem="fed-Ir-KMm" secondAttribute="leading" id="f2c-5l-leD"/>

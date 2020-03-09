@@ -16,22 +16,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG5-Ci-1qH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGy-WG-VUy" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="200" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="200" width="600" height="210"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="z7s-Qv-k0a">
-                                                <rect key="frame" x="50" y="0.0" width="314" height="80"/>
+                                                <rect key="frame" x="50" y="0.0" width="500" height="80"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-tU-LGq">
-                                                        <rect key="frame" x="-2" y="0.0" width="318" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="504" height="31"/>
                                                         <connections>
                                                             <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="jZN-oV-Ajm"/>
                                                         </connections>
                                                     </slider>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-ws-Z0O">
-                                                        <rect key="frame" x="78.5" y="80" width="157" height="0.0"/>
+                                                        <rect key="frame" x="125" y="80" width="250" height="0.0"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="Tnh-3g-x0w"/>
@@ -87,7 +87,6 @@
                     <navigationItem key="navigationItem" id="ww9-3v-AdV"/>
                     <connections>
                         <outlet property="heightConstraint" destination="Tnh-3g-x0w" id="fR7-is-apr"/>
-                        <outlet property="viewHeightConstraint" destination="Tnh-3g-x0w" id="TJe-wb-isZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +136,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RO-OK-FuD">
-                                            <rect key="frame" x="355" y="6.5" width="51" height="31"/>
+                                            <rect key="frame" x="541" y="6.5" width="51" height="31"/>
                                         </switch>
                                     </subviews>
                                     <constraints>
@@ -182,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-Q5-aap">
-                                <rect key="frame" x="186" y="213.5" width="42" height="21"/>
+                                <rect key="frame" x="279" y="139.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV6-2r-R44">
-                                <rect key="frame" x="194" y="661.5" width="26" height="21"/>
+                                <rect key="frame" x="287" y="439.5" width="26" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -238,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpa-Ch-AAC">
-                                <rect key="frame" x="187.5" y="406" width="39" height="30"/>
+                                <rect key="frame" x="280.5" y="275" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closePopup:" destination="fou-x3-yCv" eventType="touchUpInside" id="tDw-2N-0UB"/>

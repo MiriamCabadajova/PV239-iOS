@@ -9,24 +9,13 @@
 import UIKit
 
 class SliderViewController: UIViewController {
-
     
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var height: NSLayoutConstraint!
-    //
-    @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
-
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        height.constant = CGFloat(Int(round(sender.value)))
-        
-    }
-    
-    
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBAction func sliderMoved(_ sender: UISlider) {
         heightConstraint.constant = CGFloat(Int(round(sender.value)))
     }

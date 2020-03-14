@@ -6,3 +6,6 @@ Create a mobile application with a button supplied with label showing the number
 
 ## Second Assignment
 Create a mobile application with components such as UITabBarController, UINavigationController, UISlider, UITableView putting emphasis on UI and Auto Layout. 
+
+## Flea Market
+Add item to a table with custom name and price, delete it by swiping left. 

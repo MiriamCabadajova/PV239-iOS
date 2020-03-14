@@ -13,6 +13,8 @@
 		1104A1D3240FFD7C00AC1934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1104A1D2240FFD7C00AC1934 /* Assets.xcassets */; };
 		1104A1D6240FFD7C00AC1934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1104A1D4240FFD7C00AC1934 /* LaunchScreen.storyboard */; };
 		1104A1DE24100BB500AC1934 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1104A1DD24100BB500AC1934 /* AddItemViewController.swift */; };
+		11AD85C7241D4A1D004B7FAB /* MarketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD85C6241D4A1D004B7FAB /* MarketItem.swift */; };
+		11AD85C9241D4C1E004B7FAB /* ItemsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD85C8241D4C1E004B7FAB /* ItemsListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1104A1D5240FFD7C00AC1934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1104A1D7240FFD7C00AC1934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1104A1DD24100BB500AC1934 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		11AD85C6241D4A1D004B7FAB /* MarketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItem.swift; sourceTree = "<group>"; };
+		11AD85C8241D4C1E004B7FAB /* ItemsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				1104A1D2240FFD7C00AC1934 /* Assets.xcassets */,
 				1104A1D4240FFD7C00AC1934 /* LaunchScreen.storyboard */,
 				1104A1D7240FFD7C00AC1934 /* Info.plist */,
+				11AD85C6241D4A1D004B7FAB /* MarketItem.swift */,
+				11AD85C8241D4C1E004B7FAB /* ItemsListController.swift */,
 			);
 			path = FleaMarket;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				1104A1CA240FFD7B00AC1934 /* AppDelegate.swift in Sources */,
 				1104A1CC240FFD7B00AC1934 /* SceneDelegate.swift in Sources */,
+				11AD85C7241D4A1D004B7FAB /* MarketItem.swift in Sources */,
 				1104A1DE24100BB500AC1934 /* AddItemViewController.swift in Sources */,
+				11AD85C9241D4C1E004B7FAB /* ItemsListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

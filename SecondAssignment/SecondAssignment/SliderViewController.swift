@@ -17,6 +17,6 @@ class SliderViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(_ sender: UISlider) {
-        heightConstraint.constant = CGFloat(Int(round(sender.value)))
+        heightConstraint.constant = CGFloat(sender.value)
     }
 }

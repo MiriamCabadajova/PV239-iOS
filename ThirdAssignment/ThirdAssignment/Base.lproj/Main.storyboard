@@ -104,35 +104,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5b-EP-PGh" userLabel="Draw Button">
-                                <rect key="frame" x="50" y="200" width="314" height="48"/>
-                                <color key="backgroundColor" name="cellBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Draw a number">
-                                    <color key="titleColor" name="backgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="drawButtonPressed:" destination="fse-NZ-25Q" eventType="touchUpInside" id="yxg-yX-g59"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="i9r-q0-ys3">
+                                <rect key="frame" x="10" y="200" width="394" height="214.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the desired color" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It4-2G-Eh6">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" name="backgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="miL-ka-8gN">
+                                        <rect key="frame" x="0.0" y="88.5" width="394" height="32"/>
+                                        <segments>
+                                            <segment title="Red"/>
+                                            <segment title="Blue"/>
+                                            <segment title="Green"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlIndexSelected:" destination="fse-NZ-25Q" eventType="valueChanged" id="JIp-ZK-h0m"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yx-Qj-oz1">
+                                        <rect key="frame" x="0.0" y="169.5" width="394" height="45"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Draw a number">
+                                            <color key="titleColor" name="cellBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drawButtonPressed:" destination="fse-NZ-25Q" eventType="touchUpInside" id="NkY-co-K6H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="backgroundColor" name="cellBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o5b-EP-PGh" firstAttribute="top" secondItem="pZg-u3-cm4" secondAttribute="top" constant="200" id="ar0-sh-Msu">
-                                <variation key="heightClass=compact" constant="100"/>
-                            </constraint>
-                            <constraint firstItem="pZg-u3-cm4" firstAttribute="trailing" secondItem="o5b-EP-PGh" secondAttribute="trailing" constant="50" id="qQF-UM-Gw6"/>
-                            <constraint firstItem="o5b-EP-PGh" firstAttribute="leading" secondItem="pZg-u3-cm4" secondAttribute="leading" constant="50" id="tBm-MU-S2e"/>
+                            <constraint firstItem="pZg-u3-cm4" firstAttribute="trailing" secondItem="i9r-q0-ys3" secondAttribute="trailing" constant="10" id="McT-hg-jCq"/>
+                            <constraint firstItem="i9r-q0-ys3" firstAttribute="leading" secondItem="pZg-u3-cm4" secondAttribute="leading" constant="10" id="UEB-Va-Jbm"/>
+                            <constraint firstItem="i9r-q0-ys3" firstAttribute="top" secondItem="pZg-u3-cm4" secondAttribute="top" constant="200" id="gJo-z7-vPi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZg-u3-cm4"/>
                     </view>
                     <connections>
-                        <outlet property="drawButton" destination="o5b-EP-PGh" id="eho-SD-YVN"/>
+                        <outlet property="drawButton" destination="1Yx-Qj-oz1" id="sxU-G3-lqX"/>
+                        <outlet property="segmentedControl" destination="miL-ka-8gN" id="E43-fZ-XHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGT-9p-JOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="-93"/>
+            <point key="canvasLocation" x="1660.8695652173915" y="-93.080357142857139"/>
         </scene>
     </scenes>
     <resources>

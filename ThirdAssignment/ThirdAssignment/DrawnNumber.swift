@@ -11,5 +11,4 @@ import UIKit
 struct DrawnNumber {
     var color = UIColor.red
     var number = 1
-    
 }

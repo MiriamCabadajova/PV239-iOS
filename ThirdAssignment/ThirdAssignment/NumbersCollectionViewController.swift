@@ -23,6 +23,7 @@ class NumbersCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         numbersCollectionView.dataSource = self
+        numbersCollectionView.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,21 +57,17 @@ extension NumbersCollectionViewController: UICollectionViewDataSource {
         let number = numbers[indexPath.item]
         cell.numberLabel.text = "\(number.number)"
         cell.numberLabel.textColor = number.color
+        cell.layer.cornerRadius = cell.frame.size.width/2
+        cell.clipsToBounds = true
         return cell
     }
-    
     
 }
 
 extension NumbersCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select")
-        numbers.remove(at: indexPath.item)
+        numbers.remove(at: indexPath.row)
         numbersCollectionView.reloadData()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        print("highlight")
     }
 }
 

@@ -15,7 +15,7 @@ protocol NumbersCollectionDelegate: class {
 let ADD_NUMBER_SEGUE_ID = "addNumberSegueID"
 class NumbersCollectionViewController: UIViewController {
     
-    var numbers = [DrawnNumber]()
+    private var numbers = [DrawnNumber]()
     
     @IBOutlet weak var numbersCollectionView: UICollectionView!
     

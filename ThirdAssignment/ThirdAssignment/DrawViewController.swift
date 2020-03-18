@@ -12,8 +12,10 @@ class DrawViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var drawButton: UIButton!
+    
     private var drawnNumber = DrawnNumber()
-    var numbersCollectionDelegate: NumbersCollectionDelegate?
+    weak var numbersCollectionDelegate: NumbersCollectionDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         drawButton.layer.cornerRadius = 5.0
@@ -35,12 +37,13 @@ class DrawViewController: UIViewController {
     }
     
     @IBAction func drawButtonPressed(_ sender: UIButton) {
-        switch drawnNumber.color {
-        case UIColor(named: "customRed"), UIColor.red:
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
             drawnNumber.number = Int.random(in: 1...10)
-        case UIColor(named: "customBlue"), UIColor.blue:
+        case 1:
             drawnNumber.number = Int.random(in: 11...49)
-        case UIColor(named: "customGreen"), UIColor.green:
+        case 2:
             drawnNumber.number = Int.random(in: 1...50)
         default:
             print("Unexpected behaviour, using default values.")

@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class DrawViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var drawButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var topTextLabel: UILabel!
+    
     
     private var drawnNumber = DrawnNumber()
     weak var numbersCollectionDelegate: NumbersCollectionDelegate?
@@ -19,6 +23,7 @@ class DrawViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         drawButton.layer.cornerRadius = 5.0
+        activityIndicator.isHidden = true
     }
     
     
@@ -37,22 +42,59 @@ class DrawViewController: UIViewController {
     }
     
     @IBAction func drawButtonPressed(_ sender: UIButton) {
+        enableUserInteraction(value: false)
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            drawnNumber.number = Int.random(in: 1...10)
+            requestRandomNumberInterval(minVal: 1, maxVal: 10)
         case 1:
-            drawnNumber.number = Int.random(in: 11...49)
+            requestRandomNumberInterval(minVal: 11, maxVal: 49)
         case 2:
-            drawnNumber.number = Int.random(in: 1...50)
+            requestRandomNumberInterval(minVal: 1, maxVal: 50)
         default:
             print("Unexpected behaviour, using default values.")
         }
         
-        numbersCollectionDelegate?.add(item: drawnNumber)
-        dismiss(animated: true, completion: nil)
+    }
+    
+    private func enableUserInteraction(value: Bool) {
+        drawButton.isUserInteractionEnabled = value
+        segmentedControl.isUserInteractionEnabled = value
+        activityIndicator.isHidden = value
         
+        if value {
+            drawButton.backgroundColor = UIColor(named: "backgroundColor")
+            topTextLabel.textColor = UIColor(named: "backgroundColor")
+            segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        } else {
+            drawButton.backgroundColor = UIColor(named: "disabledColor")
+            topTextLabel.textColor = UIColor(named: "disabledColor")
+            segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        }
     }
 }
 
+extension DrawViewController {
+    
+    private func requestRandomNumberInterval(minVal: Int, maxVal: Int) {
+        AF.request("https://www.random.org/integers/?num=1&min=\(minVal)&max=\(maxVal)&base=10&format=plain&col=1").responseJSON { response in
+            switch response.result {
+            case .success(_):
+                if let responseVal = response.value as? Int {
+                    self.drawnNumber.number = responseVal
+                    self.numbersCollectionDelegate?.add(item: self.drawnNumber)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            case .failure(let error):
+                self.enableUserInteraction(value: true)
+                
+                let alert = UIAlertController(title: "Request unsuccessful", message: error.errorDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+        }
+    }
+    
+}
 

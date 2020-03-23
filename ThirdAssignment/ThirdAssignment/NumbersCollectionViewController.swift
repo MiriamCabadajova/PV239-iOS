@@ -54,6 +54,7 @@ extension NumbersCollectionViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_REUSE_ID, for: indexPath) as? NumberCell else {
             return UICollectionViewCell()
         }
+        cell.isUserInteractionEnabled = true
         let number = numbers[indexPath.item]
         cell.numberLabel.text = "\(number.number)"
         cell.numberLabel.textColor = number.color
@@ -66,8 +67,19 @@ extension NumbersCollectionViewController: UICollectionViewDataSource {
 
 extension NumbersCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        numbers.remove(at: indexPath.row)
-        numbersCollectionView.reloadData()
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.isUserInteractionEnabled = false
+        cell?.transform = CGAffineTransform(scaleX: 0.50, y: 0.50)
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 2.0, initialSpringVelocity: 5.0, options: [.curveEaseOut], animations: {
+                    cell?.transform = .identity
+        }) { (completed) in
+            self.numbers.remove(at: indexPath.row)
+            self.numbersCollectionView.reloadData()
+            
+        }
+
     }
 }
 

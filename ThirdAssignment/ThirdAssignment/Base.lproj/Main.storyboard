@@ -137,18 +137,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="w3d-Af-CUL">
+                                <rect key="frame" x="10" y="434.5" width="394" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="cellBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pZg-u3-cm4" firstAttribute="trailing" secondItem="w3d-Af-CUL" secondAttribute="trailing" constant="10" id="HjC-HW-20z"/>
                             <constraint firstItem="pZg-u3-cm4" firstAttribute="trailing" secondItem="i9r-q0-ys3" secondAttribute="trailing" constant="10" id="McT-hg-jCq"/>
                             <constraint firstItem="i9r-q0-ys3" firstAttribute="leading" secondItem="pZg-u3-cm4" secondAttribute="leading" constant="10" id="UEB-Va-Jbm"/>
+                            <constraint firstItem="w3d-Af-CUL" firstAttribute="leading" secondItem="pZg-u3-cm4" secondAttribute="leading" constant="10" id="bwb-Vq-ZDo"/>
                             <constraint firstItem="i9r-q0-ys3" firstAttribute="top" secondItem="pZg-u3-cm4" secondAttribute="top" constant="200" id="gJo-z7-vPi"/>
+                            <constraint firstItem="w3d-Af-CUL" firstAttribute="top" secondItem="i9r-q0-ys3" secondAttribute="bottom" constant="20" id="qNy-JB-zcH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZg-u3-cm4"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="w3d-Af-CUL" id="Jvf-AA-NyZ"/>
                         <outlet property="drawButton" destination="1Yx-Qj-oz1" id="sxU-G3-lqX"/>
                         <outlet property="segmentedControl" destination="miL-ka-8gN" id="E43-fZ-XHV"/>
+                        <outlet property="topTextLabel" destination="It4-2G-Eh6" id="vtG-2A-GAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGT-9p-JOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

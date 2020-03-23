@@ -11,4 +11,4 @@ Create a mobile application with components such as UITabBarController, UINaviga
 Add item to a table with custom name and price, delete it by swiping left. 
 
 ## Third Assignment
-Create a mobile application simulating a number lottery. Emphasis is put on UICollectionView. 
+Create a mobile application simulating a number lottery. Emphasis is put on UICollectionView, web requests using Alamofire and basic animations. 
